@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E409F5812D3FB84900B240F8 /* teru.png in Resources */ = {isa = PBXBuildFile; fileRef = E409F5802D3FB84900B240F8 /* teru.png */; };
 		E41FF6B62D3D443B00C8475E /* ossan.png in Resources */ = {isa = PBXBuildFile; fileRef = E41FF6B52D3D443B00C8475E /* ossan.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E409F5802D3FB84900B240F8 /* teru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teru.png; sourceTree = "<group>"; };
 		E41FF69A2D3BC9FA00C8475E /* tap tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tap tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41FF6B52D3D443B00C8475E /* ossan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ossan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +56,7 @@
 		E41FF6B42D3D43C600C8475E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E409F5802D3FB84900B240F8 /* teru.png */,
 				E41FF6B52D3D443B00C8475E /* ossan.png */,
 			);
 			path = Resources;
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41FF6B62D3D443B00C8475E /* ossan.png in Resources */,
+				E409F5812D3FB84900B240F8 /* teru.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

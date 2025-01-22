@@ -23,6 +23,7 @@ class GameScene: SKScene {
         self.addChild(self.mainCharaNode)
         
         self.backgroundColor = UIColor.white
+        self.addShark()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -79,5 +80,26 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // ゲームが60fpsで動作している時、1秒間に60回呼び出される
         // 負荷などの理由により必ず同じタイミングで呼び出される訳ではないので引数のcurrentTimeの差分だけ処理をする
+    }
+    
+    func addShark() {
+        let shark = SKSpriteNode(imageNamed: "teru.png")
+        let yPos = CGFloat(Int.random(in: 0 ..< Int(self.view!.frame.height))) - (self.view!.frame.height / 2)
+        
+        shark.position = CGPoint(
+            x: self.view!.frame.width * -1,
+            y: yPos
+        )
+        
+        self.addChild(shark)
+        let moveAction = SKAction.moveTo(x: self.view!.frame.width, duration: 1)
+        shark.run(moveAction)
+        
+        let sharkAttack = SKAction.run {
+            self.addShark()
+        }
+        
+        let newSharkAction = SKAction.sequence([SKAction.wait(forDuration: 1), sharkAttack])
+        self.run(newSharkAction)
     }
 }
